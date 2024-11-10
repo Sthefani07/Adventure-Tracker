@@ -19,6 +19,8 @@ const Todos = () => {
       // Only add todo if description is not empty
       dispatch({ type: ACTIONS.ADD_TODO, payload: state.formData.desc });
       dispatch({ type: ACTIONS.RESET_FORM }); // Reset form data after submission
+    }else {
+      alert("Please enter a description for your adventure!"); // Alert for empty submissions
     }
   }
 
