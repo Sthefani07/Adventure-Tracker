@@ -1,0 +1,170 @@
+/* General Styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f7f9fc;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('./img/image.jpg'); /* Adjusted file path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Main Container */
+main {
+  width: 90%;
+  max-width: 600px;
+  background-color: rgba(255, 255, 255, 0.9); /* Slight transparency to blend with background */
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow for depth */
+  text-align: center;
+}
+
+/* Heading */
+h1 {
+  font-size: 2rem;
+  color: #3a736a; /* Soft green tone to harmonize with nature-themed backgrounds */
+  margin-bottom: 10px;
+}
+
+/* Subheading */
+p {
+  font-size: 1.2rem;
+  color: #5a6e75; /* Muted gray-blue for readability */
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+/* Form Styling */
+form {
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  border: 2px solid #b8d8e0; /* Softer pastel border to match background */
+  border-radius: 8px;
+  width: 80%;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #3a736a; /* Consistent color scheme */
+}
+
+input[type="submit"] {
+  padding: 10px 20px;
+  background-color: #3a736a;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+  background-color: #2d5954; /* Darker green on hover */
+}
+
+/* Todo List Styling */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Todo Item */
+li {
+  background-color: #e8f5f2; /* Light pastel green for active todos */
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1rem;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+li:hover {
+  transform: scale(1.02);
+}
+
+/* Completed Item */
+li.completed {
+  background-color: #d3e6d5; /* Subtle pastel green for completed todos */
+  text-decoration: line-through;
+  color: #5b7a69; /* Muted color for completed tasks */
+}
+
+/* Checkbox */
+input[type="checkbox"] {
+  margin-right: 10px;
+  transform: scale(1.2);
+  accent-color: #3a736a;
+}
+
+/* Buttons inside Todo Items */
+button {
+  background-color: #f3b880; /* Warm tone to balance cool background */
+  color: #ffffff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 0.9rem;
+}
+
+button:hover {
+  background-color: #e3985e; /* Darker shade on hover */
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Animation for Editing */
+@keyframes highlightEdit {
+  0% {
+    background-color: #e8f5f2;
+  }
+  50% {
+    background-color: #fff0e6;
+  }
+  100% {
+    background-color: #e8f5f2;
+  }
+}
+
+/* Feedback for Edit/Complete */
+li.editing {
+  animation: highlightEdit 1s ease-in-out;
+}
+
+li.completed {
+  animation: highlightEdit 0.5s ease-in-out;
+}
+
+/* Icon Styling */
+.todo-icons {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+}
+
+.icon {
+  font-size: 1.2rem;
+  margin-right: 5px;
+  color: #5a6e75; /* Match with subheading color */
+}
